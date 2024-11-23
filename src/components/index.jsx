@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../components/styles.css";
 
 export default function RandomQuoteGenerator() {
   const [quote, setQuote] = useState(null);
@@ -38,53 +37,39 @@ export default function RandomQuoteGenerator() {
   }, []); // Empty dependency array ensures this runs only once
 
   return (
-    <div className="container">
-      <div id="quote-box" className="quote-box">
-        <div>
-          <h2 id="text">
-            {loading
-              ? "Loading a new quote..."
-              : quote?.quote || "Some error occurred, try again."}
-          </h2>
-          <p id="author">{!loading && (quote?.author || "Unknown")}</p>
-        </div>
-        <div className="row">
+    <div className=" bg-yellow-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto w-[50%] text-white">
+      <div
+        id="quote-box"
+        className="p-4 bg-blue-400 h-auto w-full max-w-[700px] m-0 flex-col justify-center align-middle gap-5 shadow-lg"
+      >
+        <h2 id="text" className=" text-2xl">
+          {loading
+            ? "Loading a new quote..."
+            : quote?.quote || "Some error occurred, try again."}
+        </h2>
+        <p id="author" className="text-end mt-3 italic text-base">
+          {!loading && (quote?.author || "Unknown")}
+        </p>
+        <div className="flex justify-between align-middle text-white mt-3">
           <div>
             <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank">
-              <i>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                >
-                  {/* SVG Path */}
-                </svg>
-              </i>
+              <i className="fab fa-twitter text-3xl p-2"></i>
             </a>
-            <a id="instagram-quote">
-              <i>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                >
-                  {/* SVG Path */}
-                </svg>
-              </i>
+            <a href="#">
+              <i className="fab fa-instagram text-3xl p-2"></i>
             </a>
           </div>
-          <button type="button" id="new-quote" onClick={fetchNewQuote}>
+          <button
+            className="bg-blue-600 hover:bg-blue-800 text-white font-bold px-4 rounded"
+            type="button"
+            id="new-quote"
+            onClick={fetchNewQuote}
+          >
             New Quote
           </button>
         </div>
       </div>
-      <p>
+      <p className=" text-gray-800">
         Made by: <a href="https://github.com/Gareleon">Gareleon</a>!
       </p>
     </div>
