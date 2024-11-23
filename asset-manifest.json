@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/fCC-random-quote-app/static/css/main.c5a0e07b.css",
+    "main.js": "/fCC-random-quote-app/static/js/main.47422953.js",
+    "static/js/453.42c8d0f0.chunk.js": "/fCC-random-quote-app/static/js/453.42c8d0f0.chunk.js",
+    "static/media/logo.svg": "/fCC-random-quote-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/fCC-random-quote-app/index.html",
+    "main.c5a0e07b.css.map": "/fCC-random-quote-app/static/css/main.c5a0e07b.css.map",
+    "main.47422953.js.map": "/fCC-random-quote-app/static/js/main.47422953.js.map",
+    "453.42c8d0f0.chunk.js.map": "/fCC-random-quote-app/static/js/453.42c8d0f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5a0e07b.css",
+    "static/js/main.47422953.js"
+  ]
+}
